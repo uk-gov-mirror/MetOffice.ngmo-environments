@@ -29,10 +29,13 @@ class PyPsyclone(psyclone.PyPsyclone):
     """
 
     # Extend the links
-    pypi = "PSyclone/psyclone-3.1.0.tar.gz"
+    pypi = "PSyclone/psyclone-3.2.2.tar.gz"
 
     # Extend the versions
     version("master", branch="master")
+    version(
+        "3.2.2",
+        sha256="8452fad84a2e61566e8599dc6ff336c4ada73ec03e17900aa5d37afe656d46d5")
     version(
         "3.1.0",
         sha256="7b369353942358afcb93b199ef2b11116d756cf9d671667ca95fa83fb31f0355")
@@ -41,6 +44,7 @@ class PyPsyclone(psyclone.PyPsyclone):
         sha256="25085a6d0dad36c03ec1f06becf7e2f915ded26603d4a1a2981392f5752fdb3e")
 
     # Extend the dependencies
+    depends_on("py-fparser@0.2.1:", type=("build", "run"), when="@3.2.2:")
     depends_on("py-fparser@0.2.0:", type=("build", "run"), when="@3.0.0:")
     depends_on("py-setuptools", type="build")
     depends_on("py-pyparsing", type=("build", "run"))
