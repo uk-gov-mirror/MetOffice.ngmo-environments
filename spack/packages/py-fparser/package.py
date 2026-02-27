@@ -30,6 +30,9 @@ class PyFparser(fparser.PyFparser):
     # Extend the versions
     version("master", branch="master")
     version(
+        "0.2.1",
+        sha256="1ca89a760ef23747fc54c53918c03d9165026736d9f0ea6347885bd79fe4be85")
+    version(
         "0.2.0",
         sha256="3901d31c104062c4e532248286929e7405e43b79a6a85815146a176673e69c82")
     version(
